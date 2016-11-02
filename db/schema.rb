@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019115304) do
+ActiveRecord::Schema.define(version: 20161102124027) do
+
+  create_table "biotops", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "tag_id"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "edate"

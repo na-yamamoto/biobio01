@@ -1,0 +1,2 @@
+class Biotop < ApplicationRecord
+end

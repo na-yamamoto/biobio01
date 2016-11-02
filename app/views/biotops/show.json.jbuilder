@@ -1,0 +1,1 @@
+json.partial! "biotops/biotop", biotop: @biotop

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Biotops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Tag</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @biotops.each do |biotop| %>
+      <tr>
+        <td><%= biotop.event_id %></td>
+        <td><%= biotop.tag_id %></td>
+        <td><%= biotop.description %></td>
+        <td><%= link_to 'Show', biotop %></td>
+        <td><%= link_to 'Edit', edit_biotop_path(biotop) %></td>
+        <td><%= link_to 'Destroy', biotop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Biotop', new_biotop_path %>

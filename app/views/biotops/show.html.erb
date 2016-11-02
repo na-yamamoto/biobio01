@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @biotop.event_id %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @biotop.tag_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @biotop.description %>
+</p>
+
+<%= link_to 'Edit', edit_biotop_path(@biotop) %> |
+<%= link_to 'Back', biotops_path %>
